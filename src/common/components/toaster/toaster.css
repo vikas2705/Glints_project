@@ -1,0 +1,9 @@
+.pos-top-end{
+    position: fixed;
+    top: 50px;
+    right: 1%;
+}
+
+.pos-top-end .toaster{
+    height: 50px;
+}

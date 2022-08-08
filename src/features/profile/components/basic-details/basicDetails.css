@@ -1,0 +1,26 @@
+.profile-img{
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+.basic-detail{
+    margin-bottom: 40px;
+}
+.icon{
+    cursor: pointer;
+    font-size: 20px;
+    height: 32px;
+    padding: 0px 10px;
+}
+
+.icon:hover{
+    background: lightgrey;
+    border-radius: 50%;
+    color: black;
+}
+
+.text-cyan{
+    color:#49a39b;
+}
+
