@@ -5,6 +5,7 @@ import {
     END_DATE_ERROR_MESSAGE,
     PRESENT,
 } from "../constants/messages";
+import DOMPurify from "dompurify";
 
 /**
  *
@@ -78,7 +79,5 @@ export const validateJobData = (currentJobDetail = {}) => {
 };
 
 export const sanitizeHTML = str => {
-    return str.replace(/[^\w. ]/gi, function (c) {
-        return "&#" + c.charCodeAt(0) + ";";
-    });
+    return DOMPurify.sanitize(str);
 };
