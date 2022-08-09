@@ -27,7 +27,8 @@ Apart from developing the features, I have also paid attention to :-
 # Application Demo
 
 Unfortunately, I tried deploying the app on Heroku but it has been giving me some error for a long time.
-Hence, please see the DEMO attached here:
+Hence, please see the DEMO attached here: https://www.loom.com/share/8141a29e28b04bc5b019c053937a7c33
+
 I would also recommend local setup of the application to run and test it.
 
 # How to run the code locally?
