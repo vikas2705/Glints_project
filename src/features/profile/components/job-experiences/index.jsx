@@ -62,11 +62,6 @@ const JobExperiences = props => {
         [handleSaveData, jobExperiences]
     );
 
-    // return null if profileData is empty or jobExperiences array is empty
-    if (_.isEmpty(profileData) || _.isEmpty(profileData.jobExperiences)) {
-        return null;
-    }
-
     return (
         <>
             <div className='job-experience py-3'>

@@ -3,6 +3,7 @@ import _ from "lodash";
 import { Modal } from "react-bootstrap";
 import {
     doesSkillExist,
+    sanitizeHTML,
     validateJobData,
 } from "../../../../utils/jobExperienceHelper";
 import Skill from "../../../../common/components/skill";
@@ -74,7 +75,7 @@ const AddOrEditJobExperience = props => {
 
     const handleEditJobExerience = e => {
         const updatedJobDetails = { ...currentJobDetail };
-        const value = encodeURI(e.target.value);
+        const value = sanitizeHTML(e.target.value);
 
         if (e.target.name === "jobRole") {
             updatedJobDetails.jobRole = value;
@@ -185,6 +186,7 @@ const AddOrEditJobExperience = props => {
                             onChange={handleEditJobExerience}
                             value={jobDescription}
                             required
+                            maxLength={3000}
                         />
                     </div>
                     <div className='row input-group'>

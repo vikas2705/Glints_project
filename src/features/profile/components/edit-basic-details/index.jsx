@@ -3,6 +3,7 @@ import _ from "lodash";
 import { Modal } from "react-bootstrap";
 import * as filestack from "filestack-js";
 import "./editBasicDetails.css";
+import { sanitizeHTML } from "../../../../utils/jobExperienceHelper";
 
 const client = filestack.init("AyAYt2XAJSmOSJsWHCYD6z");
 
@@ -60,7 +61,7 @@ const EditBasicDetails = props => {
 
     const handleChangeBasicDetails = e => {
         const tempBasicDetails = { ...initialBasicDetails };
-        const value = encodeURI(e.target.value);
+        const value = sanitizeHTML(e.target.value);
 
         if (e.target.name === "name") {
             tempBasicDetails.name = value;
@@ -168,6 +169,7 @@ const EditBasicDetails = props => {
                             onChange={handleChangeBasicDetails}
                             value={profileSummary}
                             required
+                            maxLength={200}
                         />
                     </div>
 
@@ -180,6 +182,7 @@ const EditBasicDetails = props => {
                             rows={8}
                             value={profileDescription}
                             required
+                            maxLength={3000}
                         />
                     </div>
                     <hr />

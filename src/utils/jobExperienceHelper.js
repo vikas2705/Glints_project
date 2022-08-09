@@ -76,3 +76,9 @@ export const validateJobData = (currentJobDetail = {}) => {
 
     return "";
 };
+
+export const sanitizeHTML = str => {
+    return str.replace(/[^\w. ]/gi, function (c) {
+        return "&#" + c.charCodeAt(0) + ";";
+    });
+};

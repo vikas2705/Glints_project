@@ -120,8 +120,16 @@ Inside the src folder, created separate folders for :-
 Due to time constraints, I could not write unit test cases. However, below are some cases which I would test in the application
 
 -   Mock the fetch API to get empty profile object and check that basic details section is not rendered
-    -   Mock the fetch API to get empty profile object and check that job experiences section is not rendered
--
+-   Mock the fetch API to get empty profile object and check that job experiences list is not rendered
+-   Mock the fetch API to get profile object with empty job experiences and check that "Add work experience" link is rendered in the DOM
+-   Mock the fetch API to get profile object with empty job experiences and check that job experiences list is not rendered
+-   Mock the fetch API to get profile object with basic details data. Match the basic details (name, age, location, profileSummary, profileDescription) data rendered with the mock data.
+-   Mock the fetch API to get profile object with basic details data. Test for both cases when profileImageUrl exists and doesnt exist and compare the image rendered
+-   Mock the uploadImage API and test if the uploaded image is same as the mock profileUrl
+-   Edit profile data with mock data and save. Test that updated data is equal to mock data
+-   Mock the fetch API to get profile object with only one job Experience and compare that length of work experiences rendered should be only 1
+-   Mock the fetch API to get profile object with multiple job Experiences and compare that rendered data is same as mock data
+-   Edit profile data with mock data and save. Test that updated data is equal to mock data
 
 # Further Improvements/Changes which could be done later
 
