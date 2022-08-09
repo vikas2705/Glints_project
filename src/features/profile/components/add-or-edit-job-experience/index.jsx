@@ -74,16 +74,18 @@ const AddOrEditJobExperience = props => {
 
     const handleEditJobExerience = e => {
         const updatedJobDetails = { ...currentJobDetail };
+        const value = encodeURI(e.target.value);
+
         if (e.target.name === "jobRole") {
-            updatedJobDetails.jobRole = e.target.value;
+            updatedJobDetails.jobRole = value;
         } else if (e.target.name === "organisation") {
-            updatedJobDetails.organisation = e.target.value;
+            updatedJobDetails.organisation = value;
         } else if (e.target.name === "startDate") {
             updatedJobDetails.startDate = e.target.value;
         } else if (e.target.name === "endDate") {
             updatedJobDetails.endDate = e.target.value;
         } else if (e.target.name === "jobDescription") {
-            updatedJobDetails.jobDescription = e.target.value;
+            updatedJobDetails.jobDescription = value;
         }
         setErrorMessage("");
         setCurrentJobDetail(updatedJobDetails);
@@ -193,8 +195,9 @@ const AddOrEditJobExperience = props => {
                             className='form-control m-1'
                             placeholder='Add skills'
                             onChange={e => {
+                                const value = e.target.value;
                                 setErrorMessage("");
-                                setNewSkill(e.target.value);
+                                setNewSkill(value);
                             }}
                             onKeyPress={handleKeyPress}
                         />

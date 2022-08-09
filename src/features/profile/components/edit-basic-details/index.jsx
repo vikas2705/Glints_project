@@ -60,17 +60,18 @@ const EditBasicDetails = props => {
 
     const handleChangeBasicDetails = e => {
         const tempBasicDetails = { ...initialBasicDetails };
+        const value = encodeURI(e.target.value);
 
         if (e.target.name === "name") {
-            tempBasicDetails.name = e.target.value;
+            tempBasicDetails.name = value;
         } else if (e.target.name === "age") {
-            tempBasicDetails.age = e.target.value;
+            tempBasicDetails.age = value;
         } else if (e.target.name === "location") {
-            tempBasicDetails.location = e.target.value;
+            tempBasicDetails.location = value;
         } else if (e.target.name === "profileSummary") {
-            tempBasicDetails.profileSummary = e.target.value;
+            tempBasicDetails.profileSummary = value;
         } else if (e.target.name === "profileDescription") {
-            tempBasicDetails.profileDescription = e.target.value;
+            tempBasicDetails.profileDescription = value;
         }
 
         setInitialBasicDetails(tempBasicDetails);
